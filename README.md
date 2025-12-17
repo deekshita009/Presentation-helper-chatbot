@@ -1,20 +1,117 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+Presentation Helper Chatbot
 
-# Run and deploy your AI Studio app
+An AI-powered web application that helps users learn presentation strategies, generate structured slide content, and download ready-to-use PowerPoint (.pptx) files directly from the browser.
 
-This contains everything you need to run your app locally.
+Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1SBRBdl4Fw5LTXE5D3MLEegWdLrIXx3-h
+Interactive website flow: Homepage → Learn Strategies → Create Presentation → Chat Interface
 
-## Run Locally
+AI-powered content generation using Gemini 2.5 Flash
 
-**Prerequisites:**  Node.js
+Dual response modes: conversational guidance and structured JSON for slides
 
+One-click PowerPoint generation using PptxGenJS (client-side)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Persistent chat history using IndexedDB
+
+Responsive, modern UI with Tailwind CSS and Lucide React icons
+
+Fully client-side (no backend server)
+
+Tech Stack
+
+Core Framework & Language
+
+React 19
+
+TypeScript
+
+Vite
+
+Styling & UI
+
+Tailwind CSS (CDN)
+
+Lucide React
+
+Inter Font
+
+Artificial Intelligence
+
+Google GenAI SDK
+
+Gemini 2.5 Flash
+
+Data & Storage
+
+IndexedDB
+
+idb
+
+Utilities
+
+PptxGenJS
+
+UUID
+
+ES Modules
+
+Getting Started
+
+Prerequisites
+
+Node.js (v18+ recommended)
+
+NPM
+
+Installation
+
+npm install
+
+Run the App
+
+npm run dev
+
+Open the app in your browser at the URL shown in the terminal.
+
+How It Works
+
+User navigates the website and opens the chat interface.
+
+Prompts are sent to Gemini via the Google GenAI SDK.
+
+AI returns text (guidance) or structured JSON (presentation).
+
+JSON is parsed in the frontend.
+
+PptxGenJS generates a downloadable .pptx file.
+
+Chat sessions are stored in IndexedDB.
+
+Prompt Design
+
+Task-specific prompts for presentation creation
+
+Informational prompts for content clarity
+
+Instructional prompts for slide structure
+
+Generation prompts enforce structured JSON output
+
+Limitations
+
+Requires internet access for AI responses
+
+No cloud storage or user authentication
+
+Large presentations may use more browser memory
+
+Future Enhancements
+
+Voice-based interaction
+
+Cloud storage integration
+
+Advanced templates and themes
+
+Context-aware personalization
